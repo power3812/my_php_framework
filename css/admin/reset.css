@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/** ---------------------------------------------------------------------------
+ * CSS Hacks
+ */
+* html selector { }
+
+*:first-child+html selector { }
+
+html > body Selector { } 
+
+html>/**/body Selector { }
+
+/** ---------------------------------------------------------------------------
+ * Clear padding, margin
+ */
+blockquote,
+body,
+code,
+samp,
+dd,
+dir,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+legend,
+marquee,
+menu,
+ol,
+p,
+pre,
+td,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+fieldset,
+frame,
+frameset,
+img {
+  border-width: 0;
+  border-style: none;
+}
+
+img {
+  vertical-align: bottom;
+  font-size: 10px;
+}
+
+code,
+kbd,
+pre,
+samp,
+tt {
+  font-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+abbr {
+  border-bottom: 1px dashed #ccc;
+}
+
+address {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+th {
+  vertical-align: middle;
+  font-weight: normal;
+  text-align: center;
+  empty-cells: show;
+}
+
+td {
+  vertical-align: middle;
+  empty-cells: show;
+}
+
+pre {
+  line-height: 1.34;
+  font-family: "ＭＳ ゴシック","Osaka-等幅",monospace;
+  font-size: 93%;
+  white-space: pre;
+}
+
+br {
+  letter-spacing: 0;
+}
+
+tt {
+  font-family: "ＭＳ ゴシック","Osaka-等幅",monospace;
+}
+
+var {
+  font-style: normal;
+}
+
+input,
+textarea,
+select {
+  font-size: small;
+}
+
+* html body a:hover * {
+  cursor: pointer;
+}

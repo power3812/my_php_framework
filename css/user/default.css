@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #ffffff;
+}
+
+body {
+  height: 100%;
+  line-height: 1.5;
+  color: #111;
+  font-family: Meiryo,Osaka,"MS PGothic",sans-serif;
+  font-size: 93%;
+}
+
+#header {
+  color: #fff;
+  font-size: 177%;
+  background-color: #000;
+  margin-bottom: 12px;
+  padding-left: 1em;
+}
+
+#contents {
+  width: 72%;
+  margin: 0 auto;
+}
+
+#footer {
+  color: #fff;
+  font-size: 108%;
+  background-color: #000;
+  margin-top: 18px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 150%;
+  font-weight: bold;
+}
+
+form.default {
+  width: 60%;
+  margin: 0 auto;
+}
+
+form.default img.photo {
+  max-height: 120px;
+  border: 1px solid #ddd;
+  margin: 6px 0;
+}
+
+form.default div.item {
+  margin-bottom: 8px;
+}
+
+form.default div.item p.title {
+  border-left: 5px solid #000;
+  padding-left: 5px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+form.default div.item p.input input[type='text'] {
+  width: 96%;
+}
+
+form div.submit input[type='submit'],
+form div.submit input[type='button'] {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+}
+
+form.default div.item p.input textarea {
+  width: 96%;
+}
+
+form.action_form div.submit {
+  display: inline-block;
+  margin-left: 6px;
+}
+
+div.confirm_form form.default div.submit {
+  text-align: center;
+}
+
+div.confirm_form div.message {
+  font-size: 108%;
+  font-weight: bold;
+  text-align: center;
+  margin: 12px 0;
+  color: #00b;
+}
+
+div.back_top {
+  text-align: center;
+}
+
+div.back_top a {
+  border: 1px solid #000;
+  background-color: #000;
+  text-align: right;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+}
+
+div.back_page {
+  text-align: center;
+}
+
+div.back_page a {
+  border: 1px solid #000;
+  background-color: #000;
+  text-align: right;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+}
+
+div.user_input_registration {
+  text-align: center;
+}
+
+div.move {
+  text-align: right;
+}
+
+div.move a {
+  border: 1px solid #000;
+  background-color: #000;
+  text-align: right;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+}
+
+ul.error {
+  width: 72%;
+  margin: 0 auto 1em;
+  border: 2px solid #cc0000;
+  color: #cc0000;
+  background-color: #ffeeee;
+  list-style-type: square;
+  padding: 1em 1em 1em 2em;
+}
+
+div.comments {
+  width: 72%;
+  border: 4px ridge #000;
+  margin: 18px auto;
+  padding: 1em;
+}
+
+div.comment {
+  width: 88%;
+  border: 1px dotted #888;
+  margin: 1em auto;
+  padding: 1em;
+}
+
+div.comment div.title {
+  font-weight: bold;
+  border-left: 3px solid #000;
+  border-bottom: 1px solid #000;
+  padding-left: 4px;
+  margin-bottom: 4px;
+}
+
+div.comment div.photo img {
+  max-width: 120px;
+  border: 1px solid #ddd;
+  margin: 4px 0;
+}
+
+img {
+  max-width: 100px;
+  border: 1px solid #ddd;
+  margin: 4px 0;
+}
+
+div.comment div.date {
+  text-align: right;
+}
+
+div.login div.register a {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+}
+
+div.paginator {
+  text-align: center;
+  width: 600px;
+  margin: 12px auto 0;
+}
+
+div.paginator ul li {
+  padding-left: 0;
+  display: inline;
+}
+
+div.paginator ul li a,
+div.paginator ul li span {
+  padding: 2px 8px;
+  border: 1px solid #777;
+  display: inline-block;
+}
