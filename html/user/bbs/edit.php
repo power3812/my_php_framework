@@ -24,8 +24,8 @@
           </div>
         </div>
       </div>
-      <?php if (is_empty($post['password']) && ($login_user['id'] !== $post['user_id'])) : ?>
-        <form class="default" action="<?php echo get_uri('index.php') ?>" method="get">
+      <?php if (is_empty($post['password']) && (!is_empty($post['user_id']) && $login_user['id'] !== $post['user_id'])) : ?>
+        <form class="default" action="<?php echo get_uri('') ?>" method="get">
           <div class="message">
             この投稿は編集できません。
           </div>
@@ -36,11 +36,11 @@
         </form>
       <?php endif ?>
     <?php endif ?>
-    <?php if (!is_empty($post['password']) || ($login_user['id'] === $post['user_id'])) : ?>
+    <?php if (!is_empty($post['password']) || (!is_empty($post['user_id'])  && $login_user['id'] === $post['user_id'])) : ?>
       <?php if ($is_password_match || ($login_user['id'] === $post['user_id'])) : ?>
         <?php include(HTML_FILES_DIR . '/user/bbs/form.php') ?>
       <?php else : ?>
-        <form class="default" action="<?php echo get_uri('edit.php') ?>" method="post">
+        <form class="default" action="<?php echo get_uri('edit') ?>" method="post">
           <div class="submit">
             <input type="hidden" name="post_id" value="<?php echo $post_id ?>" />
             <input type="hidden" name="page" value="<?php echo $page ?>" />

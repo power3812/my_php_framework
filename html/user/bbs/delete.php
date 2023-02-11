@@ -24,8 +24,8 @@
     </div>
   </div>
   <div class="confirm_form">
-    <?php if (!is_empty($post['password']) || ($login_user['id'] === $post['user_id'])) : ?>
-      <form class="default" action="<?php echo get_uri('delete.php') ?>" method="post">
+    <?php if (!is_empty($post['password']) || ($login_user && $login_user['id'] === $post['user_id'])) : ?>
+      <form class="default" action="<?php echo get_uri('delete') ?>" method="post">
         <input type="hidden" name="post_id" value="<?php echo $post['id'] ?>" />
         <input type="hidden" name="page" value="<?php echo $page ?>" />
         <input type="hidden" name="password" value="<?php echo $password ?>" />
@@ -36,7 +36,7 @@
           <div class="submit">
             <input type="hidden" name="do_delete" value="1" />
             <input type="submit" value="&raquo; 削除" />
-            <input type="button" value="&raquo; キャンセル" onclick="window.location.href='<?php echo get_uri('index.php') ?>?page=<?php echo $page ?>';">
+            <input type="button" value="&raquo; キャンセル" onclick="window.location.href='<?php echo get_uri('') ?>?page=<?php echo $page ?? 1 ?>';">
           </div>
         <?php else : ?>
           <div class="submit">
@@ -46,7 +46,7 @@
         <?php endif ?>
       </form>
     <?php else : ?>
-      <form class="default" action="<?php echo get_uri('index.php') ?>" method="get">
+      <form class="default" action="<?php echo get_uri('') ?>" method="get">
         <div class="message">
           この投稿は削除できません。
         </div>

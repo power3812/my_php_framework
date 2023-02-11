@@ -1,7 +1,7 @@
 <?php include(HTML_FILES_DIR . '/admin/common/header.php') ?>
 <?php include(HTML_FILES_DIR . '/common/error.php') ?>
 
-<form class="default" action="<?php echo get_uri('admin/login.php') ?>" method="post">
+<form class="default" action="<?php echo get_uri('admin/login') ?>" method="post">
   <div class="item">
     <p class="title">
       管理者ID

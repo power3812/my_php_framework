@@ -1,6 +1,6 @@
 <?php include(HTML_FILES_DIR . '/common/error.php') ?>
 
-<?php $_action = (isset($is_edit_form)) ? 'edit.php' : 'post.php' ?>
+<?php $_action = (isset($is_edit_form)) ? 'edit' : 'post' ?>
 <form class="default" action="<?php echo get_uri($_action) ?>" method="post" enctype="multipart/form-data">
   <div class="item">
     <p class="title">
@@ -53,7 +53,7 @@
       <input type="hidden" name="page" value="<?php if (isset($page)) echo h($page) ?>" />
       <input type="hidden" name="password" value="<?php if (isset($password)) echo h($password) ?>" />
       <input type="submit" value="&raquo; 編集" />
-      <input type="button" value="&raquo; キャンセル" onclick="window.location.href='<?php echo get_uri('index.php') ?>?page=<?php echo $page ?>';">
+      <input type="button" value="&raquo; キャンセル" onclick="window.location.href='<?php echo get_uri('') ?>?page=<?php echo $page ?? 1 ?>';">
     </div>
   <?php else : ?>
     <?php if (!$is_login) : ?>

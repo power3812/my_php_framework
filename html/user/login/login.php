@@ -1,7 +1,7 @@
 <?php include(HTML_FILES_DIR . '/user/common/header.php') ?>
 <?php include(HTML_FILES_DIR . '/common/error.php') ?>
 
-<form class="default" action="<?php echo get_uri('login.php') ?>" method="post">
+<form class="default" action="<?php echo get_uri('login') ?>" method="post">
   <div class="item">
     <p class="title">
       メールアドレス

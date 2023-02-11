@@ -7,7 +7,7 @@ class Controller_User_Login extends Controller_User_AppBase
     public function login()
     {
         if ($this->is_login) {
-            $this->redirect('index.php');
+            $this->redirect('');
         }
 
         $email    = $this->getParam('email');
@@ -49,7 +49,7 @@ class Controller_User_Login extends Controller_User_AppBase
                     $session = new Session();
                     $session->set('user_id', $user['id']);
 
-                    $this->redirect('index.php');
+                    $this->redirect('');
                 } else {
                     $errors[] = 'メールアドレスとパスワードが一致しません。';
                 }
@@ -64,6 +64,6 @@ class Controller_User_Login extends Controller_User_AppBase
         $session = new Session();
         $session->delete('user_id');
 
-        $this->redirect('index.php');
+        $this->redirect('');
     }
 }

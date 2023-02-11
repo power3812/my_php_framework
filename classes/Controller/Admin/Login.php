@@ -5,7 +5,7 @@ class Controller_Admin_Login extends Controller_Admin_AppBase
     public function login()
     {
         if ($this->is_login) {
-            $this->redirect('admin/index.php');
+            $this->redirect('admin');
         }
 
         $login_id = $this->getParam('login_id');
@@ -43,7 +43,7 @@ class Controller_Admin_Login extends Controller_Admin_AppBase
                     $session = new Session();
                     $session->set('admin_id', $admin['id']);
 
-                    $this->redirect('admin/index.php');
+                    $this->redirect('admin');
                 } else {
                     $errors[] = '管理者IDとパスワードが一致しません。';
                 }
@@ -58,6 +58,6 @@ class Controller_Admin_Login extends Controller_Admin_AppBase
         $session = new Session();
         $session->delete('admin_id');
 
-        $this->redirect('admin/login.php');
+        $this->redirect('admin/login');
     }
 }
