@@ -19,6 +19,13 @@ function get_uri($uri)
     return $uri;
 }
 
+function separate_uri(string $uri)
+{
+    $params = explode('/', strtok($uri, '?'));
+
+    return array_slice($params, 1);
+}
+
 function is_natural_number($num, $include_zero = false)
 {
     if (is_int($num)) {

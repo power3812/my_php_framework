@@ -8,7 +8,7 @@
   </div>
 <?php endif ?>
 <div class="back_top">
-  <a href="index.php">Topに戻る</a>
+  <a href="/">Topに戻る</a>
 </div>
 
 <?php include(HTML_FILES_DIR . '/user/common/footer.php') ?>

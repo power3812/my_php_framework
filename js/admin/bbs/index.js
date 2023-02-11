@@ -27,7 +27,7 @@ function recovery(post_id) {
     let form = document.getElementById('js-form');
 
     form.post_id.value = post_id;
-    form.setAttribute('action', 'recovery.php');
+    form.setAttribute('action', 'admin/recovery');
     form.submit();
 }
 
@@ -39,7 +39,7 @@ function delete_image(post_id) {
     let form = document.getElementById('js-form');
 
     form.post_id.value = post_id;
-    form.setAttribute('action', 'deleteImage.php');
+    form.setAttribute('action', 'admin/delete-image');
     form.submit();
 }
 
@@ -72,7 +72,7 @@ function bulk_delete() {
         alert('削除する投稿を選択してください');
     } else if (confirm_delete()) {
         let form = document.getElementById('js-form');
-        form.setAttribute('action', 'delete.php');
+        form.setAttribute('action', 'admin/delete');
         form.submit();
     }
 }

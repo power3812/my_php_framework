@@ -10,13 +10,13 @@
 
 <body>
   <div id="header">
-    <h1><a href="<?php echo get_uri('admin/index.php') ?>">Bulletin Board System</a></h1>
+    <h1><a href="<?php echo get_uri('/admin') ?>">Bulletin Board System</a></h1>
   </div>
   <?php if ($is_login) : ?>
     <div class="move">
       <p>こんにちは、<?php echo h($login_admin['login_id']) ?></p>
     </div>
     <div class="move">
-      <a href="<?php echo get_uri('admin/logout.php') ?>">ログアウト</a>
+      <a href="<?php echo get_uri('admin/logout') ?>">ログアウト</a>
     </div>
   <?php endif ?>

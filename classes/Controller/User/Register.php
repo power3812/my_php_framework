@@ -12,7 +12,7 @@ class Controller_User_Register extends Controller_User_AppBase
     public function registerPost()
     {
         if ($this->is_login) {
-            $this->redirect('index.php');
+            $this->redirect('');
         }
 
         $username    = $this->getParam('username');
@@ -35,7 +35,7 @@ class Controller_User_Register extends Controller_User_AppBase
         if (is_empty($errors) && !is_empty($do_register)) {
             if (!$storage_user->isEmailExists($email)) {
                 $token = hash('sha256', uniqid(mt_rand()));
-                $url   = 'http://' . DOMAIN . '/activate.php?token=' . $token;
+                $url   = 'http://' . DOMAIN . '/activate?token=' . $token;
 
                 $data['token']        = $token;
                 $data['expires_date'] = date('Y-m-d H:i:s', time() + $this->token_expires);
@@ -59,7 +59,7 @@ MESSAGE;
             if (!$is_send_mail) {
                 $errors[] = '会員登録メールの送信に失敗しました。もう一度やり直して下さい。';
             } else {
-                $this->redirect('registerFinish.php');
+                $this->redirect('register-finish');
             }
         }
 
@@ -73,7 +73,7 @@ MESSAGE;
     public function registerFinish()
     {
         if ($this->is_login) {
-            $this->redirect('index.php');
+            $this->redirect('');
         }
 
         $this->render('user/register/registerFinish.php', get_defined_vars());
@@ -82,7 +82,7 @@ MESSAGE;
     public function activate()
     {
         if ($this->is_login) {
-            $this->redirect('index.php');
+            $this->redirect('');
         }
 
         $token                     = $this->getParam('token');

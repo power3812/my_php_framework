@@ -42,16 +42,16 @@
               <?php if ($post['user_id'] === $login_user['id']) : ?>
                 <input type="hidden" name="is_user_id_match" value="1" />
                 <div class="submit">
-                  <input type="submit" name="submit" value="&raquo; 削除" formaction="<?php echo get_uri('delete.php') ?>" formmethod="post" />
-                  <input type="submit" name="submit" value="&raquo; 編集" formaction="<?php echo get_uri('edit.php') ?>" formmethod="post" />
+                  <input type="submit" name="submit" value="&raquo; 削除" formaction="<?php echo get_uri('delete') ?>" formmethod="post" />
+                  <input type="submit" name="submit" value="&raquo; 編集" formaction="<?php echo get_uri('edit') ?>" formmethod="post" />
                 </div>
               <?php endif ?>
             <?php else : ?>
               <?php if (is_empty($post['user_id'])) : ?>
                 <input type="password" name="password" value="" />
                 <div class="submit">
-                  <input type="submit" name="submit" value="&raquo; 削除" formaction="<?php echo get_uri('delete.php') ?>" formmethod="post" />
-                  <input type="submit" name="submit" value="&raquo; 編集" formaction="<?php echo get_uri('edit.php') ?>" formmethod="post" />
+                  <input type="submit" name="submit" value="&raquo; 削除" formaction="<?php echo get_uri('delete') ?>" formmethod="post" />
+                  <input type="submit" name="submit" value="&raquo; 編集" formaction="<?php echo get_uri('edit') ?>" formmethod="post" />
                 </div>
               <?php endif ?>
             <?php endif ?>

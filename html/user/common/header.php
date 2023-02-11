@@ -10,18 +10,18 @@
 
 <body>
   <div id="header">
-    <h1><a href="<?php echo get_uri('index.php') ?>">Bulletin Board System</a></h1>
+    <h1><a href="<?php echo get_uri('/') ?>">Bulletin Board System</a></h1>
   </div>
   <?php if (!$is_login) : ?>
     <div class="move">
-      <a href="<?php echo get_uri('login.php') ?>">ログイン</a>
-      <a href="<?php echo get_uri('register.php') ?>">登録</a>
+      <a href="<?php echo get_uri('login') ?>">ログイン</a>
+      <a href="<?php echo get_uri('register') ?>">登録</a>
     </div>
   <?php else : ?>
     <div class="move">
       <p>こんにちは、<?php echo h($login_user['name']) ?></p>
     </div>
     <div class="move">
-      <a href="<?php echo get_uri('logout.php') ?>">ログアウト</a>
+      <a href="<?php echo get_uri('logout') ?>">ログアウト</a>
     </div>
   <?php endif ?>

@@ -10,7 +10,7 @@ class Controller_Admin_Bbs extends Controller_Admin_AppBase
     public function index()
     {
         if (!$this->is_login) {
-            $this->redirect('admin/login.php');
+            $this->redirect('admin/login');
         }
 
         $bbs = new Storage_Bbs();
@@ -46,7 +46,7 @@ class Controller_Admin_Bbs extends Controller_Admin_AppBase
     public function delete()
     {
         if (!$this->is_login) {
-            $this->redirect('admin/login.php');
+            $this->redirect('admin/login');
         }
 
         $post_ids = $this->getParam('post_ids');
@@ -54,7 +54,7 @@ class Controller_Admin_Bbs extends Controller_Admin_AppBase
         $bbs = new Storage_Bbs();
 
         if (is_empty($post_ids)) {
-            $this->redirect('admin/index.php');
+            $this->redirect('admin');
         }
 
         $posts = $bbs->selectByIds($post_ids);
@@ -71,13 +71,13 @@ class Controller_Admin_Bbs extends Controller_Admin_AppBase
 
         $bbs->bulkSoftDelete($post_ids);
 
-        $this->redirect('admin/index.php', ['page' => $this->getPage()]);
+        $this->redirect('admin', ['page' => $this->getPage()]);
     }
 
     public function recovery()
     {
         if (!$this->is_login) {
-            $this->redirect('admin/login.php');
+            $this->redirect('admin/login');
         }
 
         $post_id = $this->getParam('post_id');
@@ -87,13 +87,13 @@ class Controller_Admin_Bbs extends Controller_Admin_AppBase
 
         $bbs->softRecovery($post_id);
 
-        $this->redirect('admin/index.php', ['page' => $this->getPage()]);
+        $this->redirect('admin', ['page' => $this->getPage()]);
     }
 
     public function deleteImage()
     {
         if (!$this->is_login) {
-            $this->redirect('admin/login.php');
+            $this->redirect('admin/login');
         }
 
         $post_id = $this->getParam('post_id');
@@ -110,7 +110,7 @@ class Controller_Admin_Bbs extends Controller_Admin_AppBase
             $bbs->deleteImage($post_id);
         }
 
-        $this->redirect('admin/index.php', ['page' => $this->getPage()]);
+        $this->redirect('admin', ['page' => $this->getPage()]);
     }
 
     protected function createConditions($title = null, $message = null, $image = 3, $status = 3)

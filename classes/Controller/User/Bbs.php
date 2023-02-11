@@ -89,8 +89,7 @@ class Controller_User_Bbs extends Controller_User_AppBase
             }
 
             $bbs->insert($data);
-
-            $this->redirect('index.php');
+            $this->redirect('');
         }
 
         $this->render('user/bbs/post.php', get_defined_vars());
@@ -107,6 +106,7 @@ class Controller_User_Bbs extends Controller_User_AppBase
 
         $bbs               = new Storage_Bbs();
         $post              = $bbs->selectById($post_id);
+        $page              = $this->getPage();
         $errors            = [];
         $is_password_set   = false;
         $is_password_match = false;
@@ -144,7 +144,7 @@ class Controller_User_Bbs extends Controller_User_AppBase
 
             $bbs->softDelete($post_id);
 
-            $this->redirect('index.php', ['page' => $this->getPage()]);
+            $this->redirect('', ['page' => $this->getPage()]);
         }
 
         $username = ($this->is_login) ? $this->login_user['name'] : $post['username'];
@@ -230,7 +230,7 @@ class Controller_User_Bbs extends Controller_User_AppBase
 
                 $bbs->updateById($post_id, $update_posts);
 
-                $this->redirect('index.php', ['page' => $this->getPage()]);
+                $this->redirect('', ['page' => $this->getPage()]);
             }
         }
 

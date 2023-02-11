@@ -1,7 +1,7 @@
 <?php include(HTML_FILES_DIR . '/admin/common/header.php') ?>
 
 <div id="contents">
-  <form class="default" action="<?php echo get_uri('admin/index.php') ?>" method="get">
+  <form class="default" action="<?php echo get_uri('admin') ?>" method="get">
     <div>
       <p>タイトル <input type="text" name="title" value="<?php if (!is_empty($title)) echo h($title) ?>" /></p>
       <p>メッセージ <input type="text" name="message" value="<?php if (!is_empty($message)) echo h($message) ?>" /></p>
