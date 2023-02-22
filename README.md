@@ -1,2 +1,7 @@
 # my_php_framework
-PHPでゼロから作ったオレオレフレームワーク
+PHPで標準機能のみでゼロから作ったオレオレフレームワーク
+
+# 改善化リスト
+- RESTfulにする
+- namespaceを使用する
+- routerを追加する -> DONE
